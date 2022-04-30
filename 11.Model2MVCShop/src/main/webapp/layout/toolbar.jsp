@@ -57,7 +57,7 @@
 		                     </a>
 		                     <ul class="dropdown-menu">
 		                         <li><a href="#">판매상품등록</a></li>
-		                         <li><a href="#">판매상품관리</a></li>
+		                         <li><a href="#">등록상품관리</a></li>
 		                         <li class="divider"></li>
 		                         <li><a href="#">etc..</a></li>
 		                     </ul>
@@ -122,6 +122,20 @@
 	 	$( "a:contains('개인정보조회')" ).on("click" , function() {
 	 		//==> DOM Object GET 3가지 방법 ==> 1. $(tagName) : 2.(#id) : 3.$(.className)
 			$(self.location).attr("href","/user/getUser?userId=${sessionScope.user.userId}");
+		});
+		
+		//==============================판매상품등록
+	 	$( "a:contains('판매상품등록')" ).on("click" , function() {
+			$(self.location).attr("href","/product/addProduct");
+		});
+		
+		//==============================판매상품관리
+		$( "a:contains('등록상품관리')" ).on("click" , function() {
+			$(self.location).attr("href","/product/listProduct?menu=manage");
+		});
+		//-============================= 상품 검색
+			$( "a:contains('상 품 검 색')" ).on("click" , function() {
+			$(self.location).attr("href","/product/listProduct?menu=search");
 		});
 		
 	</script>  
