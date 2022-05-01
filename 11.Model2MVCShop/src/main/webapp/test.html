@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="EUC-KR">
+			
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!--   jQuery , Bootstrap CDN  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Miyeon Shop</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">RED <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">BLUE</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">manu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default" 
+        >
+         <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 검색</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Help</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="container">
+<a class="btn btn-default" href="#" role="button">Link</a>
+<button class="btn btn-default" type="submit">Button</button>
+<input class="btn btn-default" type="button" value="Input">
+<input class="btn btn-default" type="submit" value="Submit">
+
+<br/>
+<hr/>
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+
+<br/>
+<hr/>
+<p>
+  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+  <button type="button" class="btn btn-default btn-lg">Large button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary">Default button</button>
+  <button type="button" class="btn btn-default">Default button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary btn-sm">Small button</button>
+  <button type="button" class="btn btn-default btn-sm">Small button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
+  <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+</p>
+
+<br/>
+<hr/>
+
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+
+<button type="button" class="btn btn-primary btn-lg active">Primary button</button>
+<button type="button" class="btn btn-default btn-lg active">Button</button>
+
+<p class="bg-primary">파란색</p>
+<p class="bg-success">초록색</p>
+<p class="bg-info">하늘색</p>
+<p class="bg-warning">노랑색</p>
+<p class="bg-danger">뻘건색</p>
+
+<br/>
+<hr/>
+
+<button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+</button>
+
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+</button>
+
+<button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
+  <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>Sun
+</button>
+
+
+<button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
+  <span class="glyphicon glyphicon-music" aria-hidden="true"></span>MUSIC
+</button>
+
+<button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
+  <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>RELOAD
+</button>
+
+<br/>
+<hr/>
+
+<div class="alert alert-danger" role="alert">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+  Enter a valid email address
+</div>
+
+<br/>
+<hr/>
+
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li class="active"><a href="#">2 <span class="sr-only">(current)</span></a></li>
+    <li class="active"><a href="#">3 <span class="sr-only">(current)</span></a></li>
+     <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">>></span></a></li>
+
+  </ul>
+</nav>
+
+</div>
+</body>
+</html>

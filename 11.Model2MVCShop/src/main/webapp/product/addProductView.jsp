@@ -21,7 +21,7 @@
 	<!--  ///////////////////////// CSS ////////////////////////// -->
 	<style>
 	
-	    //±Û¾¾Ã¼ 
+	    
 		@font-face {
 		    font-family: 'Uiyeun';
 		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff') format('woff');

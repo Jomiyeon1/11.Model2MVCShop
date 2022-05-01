@@ -38,14 +38,28 @@
 	<style>
 	  body {
             padding-top : 50px;
+            font-family: 'Uiyeun';
+			font-size : 20px;
         }
+        
+         tr > * {
+        	font-size : 20px;
+        } 
+        
+
+	@font-face {
+	    font-family: 'Uiyeun';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
     </style>
     
      <!--  ///////////////////////// JavaScript ////////////////////////// -->
 	<script type="text/javascript">
 	
 		//=============    검색 / page 두가지 경우 모두  Event  처리 =============	
-		function fncGetUserList(currentPage) {
+		function fncGetList(currentPage) {
 			$("#currentPage").val(currentPage)
 			$("form").attr("method" , "POST").attr("action" , "/user/listUser").submit();
 		}
