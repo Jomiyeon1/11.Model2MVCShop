@@ -20,6 +20,16 @@
 	
 	<!--  ///////////////////////// CSS ////////////////////////// -->
 	<style>
+		@font-face {
+	    font-family: 'Uiyeun';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+		body {
+	  		font-family: 'Uiyeun';
+			font-size : 20px;
+    }
        body > div.container{
         	border: 3px solid #D6CDB7;
             margin-top: 10px;

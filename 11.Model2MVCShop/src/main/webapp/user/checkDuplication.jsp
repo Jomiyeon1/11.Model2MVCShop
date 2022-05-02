@@ -22,7 +22,20 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 	
 	<!--  ///////////////////////// CSS ////////////////////////// -->
-	<style></style>
+	<style>
+	@font-face {
+		    font-family: 'Uiyeun';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+	  body {
+	  		font-family: 'Uiyeun';
+            padding-top : 50px;
+			font-size : 20px;
+        }
+	
+	</style>
     
      <!--  ///////////////////////// JavaScript ////////////////////////// -->
 	<script type="text/javascript">
