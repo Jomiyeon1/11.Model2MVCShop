@@ -28,8 +28,18 @@
 	
 	<!--  CSS 추가 : 툴바에 화면 가리는 현상 해결 :  주석처리 전, 후 확인-->
 	<style>
+	
+		@font-face {
+		    font-family: 'Uiyeun';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}	
+	
         body {
             padding-top : 70px;
+            font-family: 'Uiyeun';
+            font-size : 20px;
         }
    	</style>
    	
@@ -48,8 +58,14 @@
    	<div class="container ">
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Model2MVCShop </h1>
-        <p>J2SE , DBMS ,JDBC , Servlet & JSP, Java Framework , HTML5 , UI Framework 학습 후 Mini-Project 진행</p>
+        <h1>Model2 MVC Shop </h1>
+        	<c:if test="${user.role eq 'admin'}">	
+        		<p> <strong class="text-danger">관리자</strong> 계정으로 로그인하셨습니다.</p>
+        	</c:if>
+        
+        	<c:if test="${user.role eq 'user'}">	
+        		<p> <strong class="text-primary">${user.userName}</strong>님 방문을 환영합니다. </p>
+        	</c:if>
      </div>
     </div>
 

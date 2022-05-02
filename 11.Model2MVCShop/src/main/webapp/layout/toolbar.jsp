@@ -99,6 +99,9 @@
    	
    	
    	<script type="text/javascript">
+   	function history(){
+   		popWin = window.open("/history.jsp","popWin","left=300, top=200, width=300, height=200, marginwidth=0, marginheight=0, scrollbars=no, scrolling=no, menubar=no, resizable=no");
+   	} 	
 	
 		//============= logout Event  처리 =============	
 		 $(function() {
@@ -136,6 +139,11 @@
 		//-============================= 상품 검색
 			$( "a:contains('상 품 검 색')" ).on("click" , function() {
 			$(self.location).attr("href","/product/listProduct?menu=search");
+		});
+		
+		//-============================= 최근본상품
+		$( "a:contains('최근 본 상품')" ).on("click" , function() {
+			$(self.location).attr("href","history()");
 		});
 		
 	</script>  

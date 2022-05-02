@@ -62,16 +62,16 @@
 		
 			});
 				
-/*  				<c:if test="${menu eq 'search'}">
-				$( ".ct_list_pop td:nth-child(3)" ).on("click" , function() {
+ 				<c:if test="${menu eq 'search'}">
+				$( "td:nth-child(2)" ).on("click" , function() {
 		               //Debug..
 		               //alert(  $( this ).text().trim() );
 		               self.location ="/product/getProduct?prodNo="+$(this).attr("prodNo");
 		         });
-		         </c:if> */
+		         </c:if> 
 		         
 		         <c:if test="${menu eq 'manage'}">
-		         $( ".ct_list_pop td:nth-child(3)" ).on("click" , function() {
+		         $( "td:nth-child(2)" ).on("click" , function() {
 		            //Debug..
 		            //alert(  $( this ).text().trim() );
 		            self.location ="/product/updateProduct?prodNo="+$(this).attr("prodNo");
@@ -145,8 +145,18 @@
 	<div class="row">
 			<div class="col-md-6 text-left">
 		    	<p class="text-primary">
-		    		전체  ${resultPage.totalCount } 건수, 현재 ${resultPage.currentPage}  페이지
+		    		전체  ${resultPage.totalCount } 건수, 현재 ${resultPage.currentPage}  페이지	    		
 		    	</p>
+		    		<p>
+		    			<c:if test="${menu eq 'manage'}">
+		    			★상품명을 클릭하면 제품 수정이 가능합니다.	    			
+		    			</c:if>
+		    			
+		    			<c:if test="${menu eq 'search'}">
+		    			★상품명을 클릭하면 상세정보 조회가 가능합니다.
+		    			</c:if>
+		    		</p>
+		    		
 		    </div>
 
 
@@ -195,11 +205,17 @@
 				<tr>
 
 					<td align="center">${ i }</td>
-
+					<!--  -->
+					<c:if test="${menu eq 'manage'}">
+					<td align="left" ProdNo=${product.prodNo} title="Click : 상품 수정">
+					${product.prodName} </td>
+					</c:if>
+					<c:if test="${menu eq 'search'}">
 					<td align="left" ProdNo=${product.prodNo} title="Click : 상세설명 확인">
 						${product.prodName} </td>
-
-					<td align="left">${product.price} </td>
+					</c:if>
+					<!--  -->
+					<td align="left">${product.price}원 </td>
 
 					<td align="left">${product.manuDate} </td>
 

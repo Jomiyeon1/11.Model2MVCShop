@@ -32,6 +32,7 @@
  		body {
             padding-top : 50px;
             font-family : 'Uiyeun';
+            font-size : 20px;
         }
         
        body > div.container{
