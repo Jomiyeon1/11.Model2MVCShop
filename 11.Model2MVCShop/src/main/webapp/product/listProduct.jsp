@@ -80,8 +80,8 @@
 				  // ajax
 				 
 				 
-				 <c:if test="${menu eq 'search'}">
-				 $( "td:nth-child(5) > i" ).on("click" , function() {
+				 
+				 $("td:nth-child(5) > i").on("click" , function() {
 					 var prodNo = $(this).attr("prodNo");
 					 //alert("prodNo : \n"+prodNo);
 						$.ajax( 
@@ -99,11 +99,11 @@
 										//alert(status);
 										//Debug...
 										//alert("JSONData : \n"+JSONData);
-										//alert("JSONData.productName : \n"+JSONData.prodName);
+										alert("JSONData.productName : \n"+JSONData.prodName);
 										//alert("JSONData.price : \n"+JSONData.price);
 										//alert("JSONData.manuDate : \n"+JSONData.manuDate);
 										
-										var displayValue = "<h3>"
+										var displayValue = "<h6>"
 															+"상품명   : "+JSONData.prodName+"<br/>"
 															+"상세정보 : "+JSONData.prodDetail+"<br/>"
 															+"가  격   : "+JSONData.price+"<br/>"
@@ -112,11 +112,11 @@
 															+"</h3>";
 										//Debug...									
 										//alert(displayValue);
-										$("h3").remove();
+										$("h6").remove();
 										$( "#"+prodNo+"" ).html(displayValue);
 									}
 							});
-				 }); </c:if>
+				 }); 
 						
 						$(".ct_list_pop:nth-child(4n+6)" ).css("background-color" , "lavenderblush");	 
 						
@@ -222,7 +222,7 @@
 					<%-- <td align="left">${product.proTranCode} </td>	 --%>
 					
 					<td align="left">
-					<i class="glyphicon glyphicon-ok" id= "${product.prodNo}"></i>
+					<i class="glyphicon glyphicon-ok" prodNo= "${product.prodNo}" id ="${product.prodNo}"></i>
 			  		<input type="hidden" value="${product.prodNo}">
 			  		 </td>
 				 </tr>
