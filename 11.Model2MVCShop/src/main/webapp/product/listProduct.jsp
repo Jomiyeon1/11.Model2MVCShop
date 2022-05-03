@@ -47,8 +47,7 @@
 		//page		
 		function fncGetList(currentPage) {
 			$("#currentPage").val(currentPage);
-			
-					$("form").attr("method" , "POST").attr("action" , "/product/listProduct?menu=${menu}").submit();
+			$("form").attr("method" , "POST").attr("action" , "/product/listProduct?menu=${menu}").submit();
 
 		}
 		
