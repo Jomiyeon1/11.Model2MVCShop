@@ -41,7 +41,6 @@
             font-family : 'Uiyeun';
         }
         
-
 	
      </style>
 <script type="text/javascript">
@@ -76,9 +75,6 @@ function funAddProduct() {
 	$("form").attr("method" , "POST").attr("action" , "/product/addProduct").submit();
 	
 }
-
-
-
 // Å¬¸¯ event
 	 $(function() {
 			
@@ -96,8 +92,6 @@ function funAddProduct() {
 				self.location = "/product/listProduct?menu=manage";
 		});
 	});
-
-
 </script>
 </head>
 

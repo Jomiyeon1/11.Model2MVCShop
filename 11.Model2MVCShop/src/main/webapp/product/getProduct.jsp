@@ -66,7 +66,6 @@
 <jsp:include page="/layout/toolbar.jsp" />
 <!-- toolbar -->
 <!-- <form name="detailForm" method="post"> -->
-
 <div class="container"> <!-- root tag -->
 
 		<div class="page-header">

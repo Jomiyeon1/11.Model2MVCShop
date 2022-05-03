@@ -68,9 +68,73 @@
         	</c:if>
      </div>
     </div>
+    
+    
+    	<div class="container">
+ 			<!-- 추가  ===================================================-->
+			
+			
+		<h1 align="center">Site Map</h1>	
+		<div class="row col-md-3">
+		
+				<div class="panel panel-primary ">
+					<div class="panel-heading">
+						<i class="glyphicon glyphicon-heart"></i> 회원관리
+         			</div>
+         			<!--  회원관리 아이템 -->
+					<ul class="list-group">
+						 <li class="list-group-item">
+						 	<a href="#">개인정보조회</a>
+						 </li>
+						 <li class="list-group-item">
+						 	<a href="#">회원정보조회</a>
+						 </li>
+					</ul>
+		        </div>
+			</div>
+             
+              <div class="row col-md-1"></div>
+             
+			<div class="row col-md-3">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+							<i class="glyphicon glyphicon-briefcase"></i> 판매상품관리
+         			</div>
+					<ul class="list-group">
+						 <li class="list-group-item">
+						 	<a href="#">판매상품등록</a>
+						 </li>
+						 <li class="list-group-item">
+						 	<a href="#">판매상품관리</a>
+						 </li>
+					</ul>
+		        </div>
+ 			</div>
+             
+             <div class="row col-md-1"></div>
+			
+			<div class="row col-md-3">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+							<i class="glyphicon glyphicon-shopping-cart"></i> 상품구매
+	    			</div>
+					<ul class="list-group">
+						 <li class="list-group-item"><a href="#">상품검색</a></li>
+						  <li class="list-group-item">
+						  	<a href="#">구매이력조회</a>
+						  </li>
+						 <li class="list-group-item">
+						 	<a href="#">최근본상품</a>
+						 </li>
+					</ul>
+				</div>
+			</div>
+				
+		</div>	
+			<!-- 추가  ===================================================-->   
 
 	<!-- 참조 : http://getbootstrap.com/css/   : container part..... -->
-	<div class="container">
+<!-- 		<p>
         <h3>나폴레옹은 이렇게 말했다.</h3>
         <p>"오늘 나의 불행은 언젠가 내가 잘못 보낸 시간의 보복이다."</p>
   	 	<h3>"... 장벽은 절실하게 원하지 않는 사람들을 걸러내려고 존재합니다. 장벽은. 당신이 아니라 '다른' 사람들을 멈추게 하려고 거기 있는 것이지요."</h3>
@@ -78,7 +142,7 @@
          <p>행복한 삶의 비결은.</p>
          <p>좋아하는 일을 하는 것이 아리라,</p>
          <p>지금 하는 일을 좋아하는 것입니다.</p>
-  	 </div>
+  	 </div> -->
 
 </body>
 
