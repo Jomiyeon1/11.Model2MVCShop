@@ -104,6 +104,7 @@ function funAddProduct() {
 	<h1 class="bg-info text-center">상품등록</h1>
 	
 <form class="form-horizontal">
+<%-- <input type="hidden" name="prodNo" value="${product.prodNo}"/> --%>
 
 		 <div class="form-group">
 		 	<label for="prodName" class="col-sm-offset-1 col-sm-3 control-label">상품명</label>
@@ -123,14 +124,10 @@ function funAddProduct() {
 		 <div class="form-group">
 			<label for="manuDate" class="col-sm-offset-1 col-sm-3 control-label">제조일자 </label>
 			<div class="col-sm-3">
-			<input type="text" class="form-control" id="manuDate" name="manuDate"/>
+			<input type="date" class="form-control" id="manuDate" name="manuDate"/>
 				
 			</div>
-			<div class="col-sm-1">
-			<img src="../images/ct_icon_date.gif" width="15" height="15" 
-										onclick="show_calendar('document.detailForm.manuDate', document.detailForm.manuDate.value)"/>
-			</div>
-			
+
 		</div>
 
 		 <div class="form-group">

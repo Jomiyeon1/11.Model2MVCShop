@@ -142,8 +142,8 @@
 		});
 		
 		//-============================= 최근본상품
-		$( "a:contains('최근 본 상품')" ).on("click" , function() {
-			$(self.location).attr("href","history()");
+		$( "a:contains('최근본상품')" ).on("click" , function() {
+			history(-1);
 		});
 		
 	</script>  

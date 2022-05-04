@@ -103,7 +103,7 @@
 <jsp:include page="/layout/toolbar.jsp" />
 <!-- root tag -->
 <div class="container">
-<input type="hidden" name="prodNo" value="${product.prodNo}"/>
+
 
 	<div class="page-header">
 	       <h3 class=" text-info" align="center"> 상품 수정 </h3>
@@ -111,6 +111,7 @@
 	
 
 <form class="form-horizontal">
+	<input type="hidden" name="prodNo" value="${product.prodNo}"/>
 
 		 <div class="form-group">
 		 	<label for="prodName" class="col-sm-offset-1 col-sm-3 control-label" >상품명</label>

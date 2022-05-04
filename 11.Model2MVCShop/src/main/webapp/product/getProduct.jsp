@@ -45,7 +45,8 @@
 		 $( "button:contains('리스트 보기')" ).on("click" , function() {
 			//Debug..
 			//alert(  $( "td.ct_btn01:contains('이전')" ).html() );
-			history.go(-1);
+			//history.go(-1);
+			 self.location = "/product/listProduct?menu=manage"
 		});
 		
 		 $( "td.ct_btn01:contains('제품 구매')" ).on("click" , function() {
@@ -67,6 +68,8 @@
 <!-- toolbar -->
 <!-- <form name="detailForm" method="post"> -->
 <div class="container"> <!-- root tag -->
+<input type="hidden" name="prodNo" value="${product.prodNo}"/>
+	<input type="hidden" name="menu" value="${menu}"/>
 
 		<div class="page-header">
 	       <h3 class=" text-info"> 제품 상세 조회</h3>

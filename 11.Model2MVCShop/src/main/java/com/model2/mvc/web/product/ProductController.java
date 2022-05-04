@@ -98,6 +98,8 @@ public class ProductController {
 
 		productservice.updateProduct(product);
 		
+		System.out.println("================" + product);
+		System.out.println("================" + product.getProdNo());
 		return "redirect:/product/getProduct?prodNo=" + product.getProdNo();
 	}
 
