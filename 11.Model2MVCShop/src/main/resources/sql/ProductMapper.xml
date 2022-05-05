@@ -65,7 +65,16 @@
 													</if>
 												</where>
 											</if>
-											ORDER BY prod_no ) inner_table
+											ORDER BY
+												<if test="sortingCondition == 0 or sortingCondition = null or sortingCondition ='' "  >
+								 					prod_no
+												</if>
+												<if test="sortingCondition == 1 ">
+								 					price ASC
+												</if>
+												<if test="sortingCondition == 2 ">
+								 					price DESC
+												</if>) inner_table
 						WHERE ROWNUM &lt;= #{endRowNum} )
 		WHERE row_seq BETWEEN #{startRowNum} AND #{endRowNum} 
 	 </select>

@@ -44,6 +44,16 @@
 
      </style>
 	<script type="text/javascript">
+	//sorting
+	/*  			$(function() {
+					 $( "button.btn.btn-info" ).on("click" , function() {
+						//Debug..
+
+			
+				});		 */		
+		
+	
+	
 		//page		
 		function fncGetList(currentPage) {
 			$("#currentPage").val(currentPage);
@@ -60,6 +70,7 @@
 					fncGetList(1);
 		
 			});
+				 
 				
  				<c:if test="${menu eq 'search'}">
 				$( "td:nth-child(2)" ).on("click" , function() {
@@ -181,6 +192,17 @@
 			   
 			   	  <input type="hidden" id="currentPage" name="currentPage" value=""/>	
 			</form>
+			
+				<div class="form-group" name="sortingCondition">
+						<label  for="sortingCondition">	<input type="radio" name = "sorting" value="0"  checked="checked">기본 </label>
+						<label  for="sortingCondition">	<input type="radio" name = "sorting" value="1">낮은가격순 </label>
+						<label  for="sortingCondition">	<input type="radio" name = "sorting" value="2">높은가격순 </label>	
+				 <button type="submit" class="btn btn-info">
+       			   <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>				 
+				</div>
+
+			
+			
 	</div> <!--  row -->
 
 				<table class="table table-hover table-striped" >

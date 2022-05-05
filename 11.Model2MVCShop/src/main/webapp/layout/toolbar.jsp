@@ -143,7 +143,7 @@
 		
 		//-============================= 최근본상품
 		$( "a:contains('최근본상품')" ).on("click" , function() {
-			history(-1);
+			history();
 		});
 		
 	</script>  

@@ -46,7 +46,7 @@
 			//Debug..
 			//alert(  $( "td.ct_btn01:contains('이전')" ).html() );
 			//history.go(-1);
-			 self.location = "/product/listProduct?menu=manage"
+			 self.location = "/product/listProduct?menu=search"
 		});
 		
 		 $( "td.ct_btn01:contains('제품 구매')" ).on("click" , function() {

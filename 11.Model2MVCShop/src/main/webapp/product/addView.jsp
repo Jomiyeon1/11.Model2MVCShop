@@ -38,10 +38,15 @@ System.out.println("addView productVO => " + product);
 		    font-style: normal;
 		}
 	  body {
-	  		font-family: 'Uiyeun';
+	  		
             padding-top : 50px;
 			font-size : 20px;
         }
+        
+     * {
+     	font-family: 'Uiyeun';
+     	font-size : 20px;
+     }
      </style>
 	<script type="text/javascript">
 	
@@ -88,7 +93,7 @@ System.out.println("addView productVO => " + product);
 
 		<div class="row">
 	  		<div class="col-xs-4 col-md-2"><strong>제조일자</strong></div>
-			<div class="col-xs-8 col-md-4">${product.regDate}</div>
+			<div class="col-xs-8 col-md-4">${product.manuDate}</div>
 		</div>
 
 		<div class="row">
