@@ -42,7 +42,8 @@
 	<script type="text/javascript">		
 	 function funDelProduct() {
 		 
-		 $("form").attr("method" , "POST").attr("action" , "/product/delProduct").submit();
+		 $("form").attr("method" , "GET").attr("action" , "/product/delProduct").submit();
+		 alert("submit");
 	}
 	 
 	 $(function() {
@@ -60,7 +61,7 @@
 				self.location = "/addPurchaseView.do/prod_no=10004"
 			});
 		 $( "button:contains('삭제')" ).on("click" , function() {
-
+				alert("실행확인");
 				funDelProduct();
 				 /* self.location = "/product/listProduct?menu=search" */
 			});
@@ -89,13 +90,13 @@
 	       <h5 class="text-muted"> <strong class="text-danger"> 상품 수정은 상단의 등록 상품 관리 메뉴를 이용해주세요. </strong></h5>
 	       </c:if>
 	    </div>
-	    
+<form class="form-horizontal">	    
 	    <!-- prodNo -->
 	    <!-- admin만 조회되도록  -->
    		<c:if test="${user.role eq 'admin'}">	
 		    <div class="row">
 		  		<div class="col-xs-4 col-md-2"><strong>상품번호</strong></div>
-				<div class="col-xs-8 col-md-4">${product.prodNo}</div>
+				<div class="col-xs-8 col-md-4" name="prodNo" id="prodNo">${product.prodNo}</div>
 			</div>
 		</c:if>
 	    
@@ -154,7 +155,7 @@
 
 	
 			
-		
+	</form>	
 </div><!-- root tag end.. -->
 
 </body>

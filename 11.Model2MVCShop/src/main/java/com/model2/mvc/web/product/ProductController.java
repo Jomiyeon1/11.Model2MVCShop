@@ -134,13 +134,13 @@ public class ProductController {
 		return "forward:/product/listProduct.jsp";
 	}
 	
-	@RequestMapping(value = "delProduct",  method=RequestMethod.POST )
-	public String deleteProduct(@RequestParam("prodNo") int prodNo, Model model) throws Exception {
+	@RequestMapping(value = "delProduct" )
+	public String deleteProduct(@RequestParam("prodNo") int prodNo) throws Exception {
 		
-		System.out.println("/product/updateProduct : GET");
+		System.out.println("/product/delProduct ");
 		System.out.println("delProduct" + prodNo);
 		productservice.delProduct(prodNo);
-
+		
 
 		return "forward:/product/listProduct.jsp";
 	}

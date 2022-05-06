@@ -60,6 +60,7 @@ public class ProductDaoImpl implements ProductDao {
 	@Override
 	public void delProduct(int prodNo) throws Exception {
 		sqlSession.delete("ProductMapper.delProduct", prodNo);
+		System.out.println("delProduct : DaoImpl");
 		
 	}
 

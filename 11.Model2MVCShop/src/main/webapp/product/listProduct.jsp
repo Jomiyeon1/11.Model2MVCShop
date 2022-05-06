@@ -9,6 +9,8 @@
 	<!-- 참조 : http://getbootstrap.com/css/   참조 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
+
+	
 	<!--  ///////////////////////// Bootstrap, jQuery CDN ////////////////////////// -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
@@ -21,7 +23,9 @@
    
     <!-- Bootstrap Dropdown Hover JS -->
    <script src="/javascript/bootstrap-dropdownhover.min.js"></script>
-	
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>	
 	<!--  ///////////////////////// CSS ////////////////////////// -->
 	<style>
  		body {
@@ -52,8 +56,41 @@
 			
 				});		 */		
 		
-	
-	
+
+				// ================================================
+				 $( function() {
+				    var availableTags = [
+				      "vaio vgn FS70B",
+				      "보르도",
+				      "보드세트",
+				      "인라인",
+				      "삼성센스 2G",
+				      "연꽃",
+				      "삼성센스",
+				      "돌체라떼",
+				      "테스트",
+				      "0425테스트",
+				      "리들리",
+				      "****리들리",
+				      "111111리들리",
+				      "0425테스트",
+				      "0425테스트...",
+				      "0427",
+				      "1212",
+				      "test",
+				      "되나?",
+				      "11111",
+				      "아이스아메리카노",
+				      "자전거"
+				    ];
+				    $( "#searchKeyword" ).autocomplete({
+				      source: availableTags,
+				    });
+				  } );
+					
+
+				// ================================================	
+				
 		//page		
 		function fncGetList(currentPage) {
 			$("#currentPage").val(currentPage);
@@ -69,6 +106,7 @@
 					fncGetList(1);
 		
 			});
+ 		
 		
 				 
   /* 			 $(function() {
@@ -77,7 +115,9 @@
 					 fncGetList(1);
 				});	 */  		 
 				 
-				 
+
+	
+	
 				
  				<c:if test="${menu eq 'search'}">
 				$( "td:nth-child(2)" ).on("click" , function() {
@@ -188,16 +228,20 @@
 						
 					</select> 
 				</div>
-				  <div class="form-group">
+				  <div class="form-group ui-widget">
 				    <label class="sr-only" for="searchKeyword">검색어</label>
 				    <input type="text" class="form-control" id="searchKeyword" name="searchKeyword"  placeholder="검색어"
 				    			 value="${! empty search.searchKeyword ? search.searchKeyword : '' }"  >
+				    
+   				   <button type="submit" class="btn btn-default">
+       			   <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>		
+			   	
+			   	  <input type="hidden" id="currentPage" name="currentPage" value=""/>	
 				  </div>
 				  
-				   <button type="submit" class="btn btn-default">
-       			   <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-			   
-			   	  <input type="hidden" id="currentPage" name="currentPage" value=""/>	
+
+
+
 			   	  
 <!-- 				<div class="form-group" name="sortingCondition">
 						<label  for="sortingCondition">	<input type="radio" name = "sorting" value="0"  checked="checked" >기본 </label>

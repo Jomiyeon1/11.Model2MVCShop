@@ -94,6 +94,16 @@ public class ProductRestController {
 		 return product;
 	}
 	
+	@RequestMapping(value = "json/delProduct/{userId}")
+	public String delProduct(@RequestBody Product product) throws Exception {
+		System.out.println("/product/delProduct");
+		
+		productService.delProduct(product.getProdNo());
+		
+		 return "redirect:/product/listProduct.jsp";
+	}	
+	
+	
 	@RequestMapping(value = "json/listProduct")
 	public Map listProduct(@RequestBody Search search, HttpServletRequest request) throws Exception {
 
