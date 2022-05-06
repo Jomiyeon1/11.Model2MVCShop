@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.model2.mvc.common.Page;
 import com.model2.mvc.common.Search;
 import com.model2.mvc.service.domain.Product;
+import com.model2.mvc.service.domain.User;
 import com.model2.mvc.service.product.ProductService;
 
 //==> »óÇ°°ü¸® Controller
@@ -63,14 +64,17 @@ public class ProductController {
 
 	// @RequestMapping("/getProduct.do")
 	@RequestMapping(value = "getProduct", method = RequestMethod.GET)
-	public String getProduct(@RequestParam("prodNo") int prodNo, Model model) throws Exception {
+	public String getProduct(@RequestParam("prodNo") int prodNo, Model model, HttpSession session) throws Exception {
 
 		System.out.println("/product/getProduct : GET ");
 
 		Product product = productservice.getProduct(prodNo);
 
 		model.addAttribute("product", product);
-
+		
+//		int sessionNo=((Product)session.getAttribute("history")).getProdNo();
+//		session.setAttribute("history", sessionNo);
+		
 		return "forward:/product/getProduct.jsp";
 
 	}
@@ -126,6 +130,17 @@ public class ProductController {
 		model.addAttribute("resultPage", resultPage);
 		model.addAttribute("search", search);
 		model.addAttribute("menu", menu);
+
+		return "forward:/product/listProduct.jsp";
+	}
+	
+	@RequestMapping(value = "delProduct",  method=RequestMethod.POST )
+	public String deleteProduct(@RequestParam("prodNo") int prodNo, Model model) throws Exception {
+		
+		System.out.println("/product/updateProduct : GET");
+		System.out.println("delProduct" + prodNo);
+		productservice.delProduct(prodNo);
+
 
 		return "forward:/product/listProduct.jsp";
 	}

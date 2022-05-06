@@ -20,6 +20,8 @@ public interface ProductDao {
 	
 	public void updateProduct(Product product) throws Exception;
 	
+	public void delProduct(int prodNo) throws Exception;
+	
 	
 
 }

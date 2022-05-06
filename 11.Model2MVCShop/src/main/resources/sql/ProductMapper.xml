@@ -66,13 +66,13 @@
 												</where>
 											</if>
 											ORDER BY
-												<if test="sortingCondition == 0 or sortingCondition = null or sortingCondition ='' "  >
+												<if test="sorting == 0 or sorting = null or sorting ='' "  >
 								 					prod_no
 												</if>
-												<if test="sortingCondition == 1 ">
+												<if test="sorting == 1 ">
 								 					price ASC
 												</if>
-												<if test="sortingCondition == 2 ">
+												<if test="sorting == 2 ">
 								 					price DESC
 												</if>) inner_table
 						WHERE ROWNUM &lt;= #{endRowNum} )
@@ -99,4 +99,10 @@
 						</if> ) countTable						
 	 </select>
 	 
+	 <!-- delete -->
+	 <delete id="delProduct" parameterType="int">
+	 DELETE
+	 FROM product
+	 where prod_no = #{value}
+	 </delete>
 </mapper>

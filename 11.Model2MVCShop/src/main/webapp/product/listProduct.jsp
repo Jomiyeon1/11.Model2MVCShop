@@ -63,7 +63,6 @@
 		
 			//검색
  			$(function() {
-				 //<td background="/images/ct_btnbg02.gif" class="ct_btn01" style="padding-top: 3px;">
 				 $( "button.btn.btn-default" ).on("click" , function() {
 					//Debug..
 					//alert(  $( "td.ct_btn01:contains('검색')" ).html() );
@@ -72,11 +71,11 @@
 			});
 		
 				 
-/* 			 $(function() {
-				 $( "button.btn.btn-info" ).on("click" , function() {
+  /* 			 $(function() {
+				 $( "button.btn.btn-info:contains('확인')" ).on("click" , function() {
 					//Debug..
 					 fncGetList(1);
-				});	 */		 
+				});	 */  		 
 				 
 				 
 				
@@ -117,7 +116,7 @@
 										//alert(status);
 										//Debug...
 										//alert("JSONData : \n"+JSONData);
-										alert("JSONData.productName : \n"+JSONData.prodName);
+										//alert("JSONData.productName : \n"+JSONData.prodName);
 										//alert("JSONData.price : \n"+JSONData.price);
 										//alert("JSONData.manuDate : \n"+JSONData.manuDate);
 										
@@ -205,7 +204,7 @@
 						<label  for="sortingCondition">	<input type="radio" name = "sorting" value="1">낮은가격순 </label>
 						<label  for="sortingCondition">	<input type="radio" name = "sorting" value="2">높은가격순 </label>	
 				 <button type="submit" class="btn btn-info">
-       			   <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>				 
+       			   <span class="glyphicon glyphicon-search" aria-hidden="true">확인</span></button>				 
 				</div>	 -->		   	  
 			   	  
 			</form>

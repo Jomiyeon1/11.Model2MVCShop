@@ -90,7 +90,7 @@
 			 $( "button:contains('秒家')" ).on("click" , function() {
 				//Debug..
 				//alert(  $( "td.ct_btn01:contains('秒家')" ).html() );
-				history.go(-1);
+				self.location = "/product/listProduct?menu=manage"
 			});
 		});
 
@@ -130,13 +130,8 @@
 		 <div class="form-group">
 			<label for="manuDate" class="col-sm-offset-1 col-sm-3 control-label">力炼老磊 </label>
 			<div class="col-sm-3">
-			<input type="text" class="form-control" id="manuDate" name="manuDate" value="${product.regDate}"/>
-				
-			</div>
-			<div class="col-sm-1">
-			<img src="../images/ct_icon_date.gif" width="15" height="15" 
-										onclick="show_calendar('document.detailForm.manuDate', document.detailForm.manuDate.value)"/>
-			</div>
+			<input type="date" class="form-control" id="manuDate" name="manuDate" value="${product.manuDate}"/>
+		</div>		
 			
 		</div>
 
